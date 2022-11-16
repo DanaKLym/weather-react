@@ -1,0 +1,33 @@
+body {
+    background: radial-gradient(
+      circle,
+      rgba(181, 255, 255, 1) 23%,
+      rgba(215, 174, 243, 1) 61%,
+      rgb(252, 251, 251) 100%
+    );
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  
+  .App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  
+  .container {
+    text-align: center;
+    margin: 3px auto;
+    padding: 1px;
+    max-width: 600px;
+  
+    background: #d7aef3;
+    color: #fff;
+  
+    border-radius: 3px;
+    box-shadow: 8px 8px 2px #891180, 16px 16px 2px #6e0c66, 24px 24px 3px #460540;
+  }
+  
+  hr {
+    margin: 15px 45px;
+  }
+  

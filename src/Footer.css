@@ -1,0 +1,37 @@
+footer {
+    padding: 0 30px 15px;
+  }
+  
+  footer,
+  a.githubLink {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 15px;
+    opacity: 0.8;
+  }
+  
+  footer a.githubLink {
+    text-decoration: none;
+    color: #03105a;
+    text-shadow: 2px 2px 3px #fff;
+  }
+  
+  footer a.githubLink:hover {
+    color: #03105a;
+    text-shadow: 2px 2px 3px rgb(176, 9, 209);
+  }
+  
+  footer a.githubLink:active {
+    color: #fff;
+    text-shadow: 2px 2px 5px #03105a;
+    text-decoration: none;
+  }
+
+  footer a.linkedinLink {
+    text-decoration: none;
+    font-weight: 700;
+    color: #fff;
+  }
+  
+  footer a.linkedinLink:hover {
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+  }

@@ -1,19 +1,27 @@
-import './App.css';
-import Weather from "./Weather";
-import { SpinnerDotted } from "spinners-react";
+import "./styles.css";
+import Header from "./Header";
+import MainWeather from "./MainWeather";
+import LowerWeather from "./LowerWeather";
+import Footer from "./Footer";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>
-          Howdy!
-        </h1>
-        <Weather city="Bristol"/>
-        <SpinnerDotted color="#f4edc8"/>
-      </header>
+      <div className="container">
+        <Header />
+        <MainWeather
+          weekDay="Tuesday"
+          month="October"
+          date="11"
+          year="2022"
+          time="13:39"
+          description="Few clouds"
+        />
+        <hr />
+        <LowerWeather />
+        <hr />
+        <Footer />
+      </div>
     </div>
   );
 }
-
-export default App;

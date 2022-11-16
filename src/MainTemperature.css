@@ -1,0 +1,38 @@
+span.mainDegrees {
+    font-size: 26px;
+  }
+  span.temType {
+    font-size: 12px;
+    cursor: pointer;
+  }
+  
+  .active {
+    cursor: default;
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .active:hover {
+    text-decoration: none;
+    cursor: text;
+    color: #fff;
+  }
+  
+  a.to-be-chosen {
+    text-decoration: none;
+    color: #cee7eb;
+    transition: all 200ms ease-in-out;
+  }
+  
+  a.to-be-chosen:hover {
+    color: #c0ebfc;
+    font-size: 16px;
+  }
+  
+  @media (max-width: 600px) {
+    div.mainTemperature {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  

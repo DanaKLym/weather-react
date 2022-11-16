@@ -1,0 +1,11 @@
+.mainCity {
+    margin: 20px 20px 8px;
+  
+    text-align: start;
+    text-transform: capitalize;
+    color: #ff2fd2;
+    text-shadow: #460540 2px 2px;
+    font-family: "Press Start 2P", cursive;
+    font-size: 40px;
+  }
+  
