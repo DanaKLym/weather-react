@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./styles.css";
 import Header from "./Header";
 import MainWeather from "./MainWeather";
