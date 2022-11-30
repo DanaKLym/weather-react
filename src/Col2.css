@@ -1,4 +1,5 @@
 span.humidity,
 span.wind {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: var(--secondary-font);
+  color: var(--secondary-color);
 }

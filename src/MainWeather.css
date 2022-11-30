@@ -5,17 +5,19 @@ section.mainWeather {
   }
   
   section h2.degrees {
-    font-family: "Press Start 2P", cursive;
-    font-size: 20px;
-    text-shadow: #460540 2px 2px;
+    font-family: var(--primary-font);
+    font-size: 14px;
   }
   
   section p span.dateTime {
-    font-family: "Josefin Sans", sans-serif;
+    font-family: var(--secondary-font);
+    color: var(--secondary-color);
+    font-weight: 700;
   }
   
   section p #description {
-    font-family: "Josefin Sans", sans-serif;
+    font-family: var(--secondary-font);
+    color: var(--secondary-color);
     display: block;
   }
   

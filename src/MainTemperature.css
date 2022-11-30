@@ -1,32 +1,34 @@
 span.mainDegrees {
-    font-size: 26px;
+    font-size: 42px;
+    color: #1e1b1e;
   }
   span.temType {
-    font-size: 12px;
+    font-size: 24px;
     cursor: pointer;
   }
   
   .active {
     cursor: default;
     text-decoration: none;
-    color: #fff;
+    color: var(--primary-color);
+    font-size: 24px;
   }
   
   .active:hover {
     text-decoration: none;
     cursor: text;
-    color: #fff;
+    color: var(--primary-color);
   }
   
   a.to-be-chosen {
     text-decoration: none;
-    color: #cee7eb;
+    color: var(--secondary-color);
     transition: all 200ms ease-in-out;
   }
   
   a.to-be-chosen:hover {
-    color: #c0ebfc;
-    font-size: 16px;
+    color: var(--secondary-color);
+    font-size: 26px;
   }
   
   @media (max-width: 600px) {

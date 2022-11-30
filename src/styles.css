@@ -1,10 +1,14 @@
+/*  */
+:root {
+  --primary-font: 'DM Serif Display', serif;
+  --secondary-font: "Josefin Sans", sans-serif;
+  --primary-color: #1e1b1e;
+  --secondary-color: rgba(0, 0, 0, 0.6);
+  --text-shadow: 1px 1px #F7F5F4;
+}
+
 body {
-    background: radial-gradient(
-      circle,
-      rgba(181, 255, 255, 1) 23%,
-      rgba(215, 174, 243, 1) 61%,
-      rgb(252, 251, 251) 100%
-    );
+    background-image: url(./pics/holographic.jpg);
     background-attachment: fixed;
     background-size: cover;
   }
@@ -16,16 +20,16 @@ body {
   
   .container {
     text-align: center;
-    margin: 3px auto;
+    margin: 60px auto;
     padding: 1px;
-    max-width: 600px;
+    max-width: 450px;
   
-    background: #d7aef3;
-    color: #fff;
+    backdrop-filter: blur(10px);
+    color: #000;
   
-    border-radius: 3px;
-    box-shadow: 8px 8px 2px #891180, 16px 16px 2px #6e0c66, 24px 24px 3px #460540;
-  }
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    }
   
   hr {
     margin: 15px 45px;

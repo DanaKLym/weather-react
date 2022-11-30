@@ -4,7 +4,7 @@ footer {
   
   footer,
   a.githubLink {
-    font-family: "Josefin Sans", sans-serif;
+    font-family: var(--secondary-font);
     font-size: 15px;
     opacity: 0.8;
   }
