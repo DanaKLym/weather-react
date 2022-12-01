@@ -8,7 +8,7 @@
 }
 
 body {
-    background-image: url(./pics/holographic.jpg);
+    background-image: url(./pics/morning-sky.jpg);
     background-attachment: fixed;
     background-size: cover;
   }
@@ -22,7 +22,7 @@ body {
     text-align: center;
     margin: 60px auto;
     padding: 1px;
-    max-width: 450px;
+    max-width: 600px;
   
     backdrop-filter: blur(10px);
     color: #000;
@@ -30,8 +30,154 @@ body {
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.4);
     }
+
+    div.Weather {
+      padding: 30px 30px 8px;
+      border-radius: 5px;
+    }
+    
+    form.search {
+      font-family: 'DM Serif Display', serif;;
+      font-size: 16px;
+      line-height: 2;
+    }
+    
+    input.search-input {
+      background-color: inherit;
+      border-radius: 8px;
+      border: 1px solid #F7F5F4;
+      color: rgba(45, 26, 42, 0.85);
+      font-style: italic;
+      display: block;
+      margin: auto;
+    }
   
-  hr {
-    margin: 15px 45px;
+    input.search-input:focus {
+      outline: none;
+      box-shadow: inset 2px 2px 15px #F7F5F4;
+    }
+    
+    input.search-input::placeholder {
+      color: rgba(45, 26, 42, 0.75);
+      text-align: start;
+      padding-left: 5px;
+    }
+  
+    .upperBtn {
+      background: inherit;
+      border: 1px solid #F7F5F4;
+      border-radius: 5px;
+      color: rgba(45, 26, 42, 0.85);
+      font-family: var(--primary-font);
+      margin: 8px;
+      padding: 4px 12px;
+      font-size: 22px;
+      transition: all 250ms ease-in-out;
+    }
+    
+    .upperBtn:hover {
+      box-shadow: 2px 2px 5px #b5ffff, 1px -1px 5px #F7F5F4;
+      border-radius: 2px;
+    }
+    
+    .upperBtn:active {
+      box-shadow: inset 2px 2px 10px #F7F5F4, 1px -1px 10px #F7F5F4;
+    }
+    
+    .mainCity {
+      margin: 20px 20px 8px;
+    
+      text-align: center;
+      text-transform: capitalize;
+      color: var(--primary-color);
+      filter: drop-shadow(var(--text-shadow));
+      font-family: var(--primary-font);
+      font-size: 86px;
+    }
+    
+    section.mainWeather {
+      margin: 0 20px;
+      padding: 0 30px;
+      text-align: start;
+    }
+    
+    section h2.degrees {
+      font-family: var(--primary-font);
+      font-size: 14px;
+    }
+    
+    section p span.dateTime {
+      font-family: var(--secondary-font);
+      color: var(--secondary-color);
+      font-weight: 700;
+    }
+    
+    section p #description {
+      font-family: var(--secondary-font);
+      color: var(--secondary-color);
+      display: block;
+    }
+    
+    section p #description:first-letter {
+      text-transform: uppercase;
+    }
+
+    .mainImage {
+      display: block;
+      width: 180px;
+      transition: all 400ms ease-in-out;
+    }
+    
+    .mainImage:hover {
+      transform: scale(1.2);
+    }
+  
+    span.mainDegrees {
+      font-size: 42px;
+      color: #1e1b1e;
+    }
+    span.temType {
+      font-size: 24px;
+      cursor: pointer;
+    }
+    
+    .active {
+      cursor: default;
+      text-decoration: none;
+      color: var(--primary-color);
+      font-size: 24px;
+    }
+    
+    .active:hover {
+      text-decoration: none;
+      cursor: text;
+      color: var(--primary-color);
+    }
+    
+    a.to-be-chosen {
+      text-decoration: none;
+      color: var(--secondary-color);
+      transition: all 200ms ease-in-out;
+    }
+    
+    a.to-be-chosen:hover {
+      color: var(--secondary-color);
+      font-size: 26px;
+    }
+
+    span.humidity,
+span.wind {
+  font-family: var(--secondary-font);
+  color: var(--secondary-color);
+}
+
+hr {
+  margin: 15px 45px;
+}
+
+@media (max-width: 600px) {
+  div.mainTemperature {
+    display: flex;
+    flex-direction: row;
   }
-  
+}
