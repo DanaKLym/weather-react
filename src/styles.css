@@ -1,20 +1,20 @@
-/*  */
+/* 2px 2px 3px #fff */
 :root {
   --primary-font: 'DM Serif Display', serif;
   --secondary-font: "Josefin Sans", sans-serif;
   --primary-color: #1e1b1e;
   --secondary-color: rgba(0, 0, 0, 0.6);
-  --text-shadow: 1px 1px #F7F5F4;
+  --text-shadow: 2px 2px 2px #f7f5f4;
+  --transition: all 300ms ease-in-out;
 }
 
 body {
-    background-image: url(./pics/morning-sky.jpg);
+    background-image: url(./pics/09.png);
     background-attachment: fixed;
     background-size: cover;
   }
   
   .App {
-    font-family: sans-serif;
     text-align: center;
   }
   
@@ -37,7 +37,7 @@ body {
     }
     
     form.search {
-      font-family: 'DM Serif Display', serif;;
+      font-family: 'DM Serif Display', serif;
       font-size: 16px;
       line-height: 2;
     }
@@ -45,16 +45,16 @@ body {
     input.search-input {
       background-color: inherit;
       border-radius: 8px;
-      border: 1px solid #F7F5F4;
-      color: rgba(45, 26, 42, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      color: var(--secondary-color);
       font-style: italic;
-      display: block;
       margin: auto;
     }
   
     input.search-input:focus {
       outline: none;
       box-shadow: inset 2px 2px 15px #F7F5F4;
+      border: 1px solid #F7F5F4;
     }
     
     input.search-input::placeholder {
@@ -65,19 +65,20 @@ body {
   
     .upperBtn {
       background: inherit;
-      border: 1px solid #F7F5F4;
+      border: 1px solid rgba(255, 255, 255, 0.4);
       border-radius: 5px;
-      color: rgba(45, 26, 42, 0.85);
+      color: var(--primary-color);
       font-family: var(--primary-font);
       margin: 8px;
       padding: 4px 12px;
       font-size: 22px;
-      transition: all 250ms ease-in-out;
+      transition: var(--transition);
     }
     
     .upperBtn:hover {
       box-shadow: 2px 2px 5px #b5ffff, 1px -1px 5px #F7F5F4;
-      border-radius: 2px;
+      border-radius: 5px;
+      filter: drop-shadow(var(--text-shadow));
     }
     
     .upperBtn:active {
@@ -103,6 +104,7 @@ body {
     
     section h2.degrees {
       font-family: var(--primary-font);
+      filter: drop-shadow(var(--text-shadow));
       font-size: 14px;
     }
     
@@ -125,7 +127,7 @@ body {
     .mainImage {
       display: block;
       width: 180px;
-      transition: all 400ms ease-in-out;
+      transition: var(--transition);
     }
     
     .mainImage:hover {
@@ -156,13 +158,13 @@ body {
     
     a.to-be-chosen {
       text-decoration: none;
-      color: var(--secondary-color);
-      transition: all 200ms ease-in-out;
+      color: rgba(3, 16, 90, 0.5);
+      transition: var(--transition);
     }
     
     a.to-be-chosen:hover {
-      color: var(--secondary-color);
       font-size: 26px;
+      color: #03105a;
     }
 
     span.humidity,

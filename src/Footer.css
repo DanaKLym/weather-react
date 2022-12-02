@@ -10,14 +10,16 @@ footer {
   }
   
   footer a.githubLink {
+    display: inline-block;
     text-decoration: none;
     color: #03105a;
-    text-shadow: 2px 2px 3px #fff;
+    text-shadow: var(--text-shadow);
+    transition: var(--transition);
   }
   
   footer a.githubLink:hover {
     color: #03105a;
-    text-shadow: 2px 2px 3px rgb(176, 9, 209);
+    transform: scale(1.05);
   }
   
   footer a.githubLink:active {
