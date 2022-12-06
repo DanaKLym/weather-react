@@ -18,7 +18,6 @@ export default function Weather() {
       temperature: response.data.temperature.current,
       humidity: response.data.temperature.humidity,
       wind: response.data.wind.speed,
-      icon: response.data.condition.icon,
     });
   }
 
@@ -56,7 +55,7 @@ export default function Weather() {
   <div className="col">
     <h2 className="degrees">
       <img
-        src={`http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${weather.icon}.png`}
+        src={CloudyDay}
         alt={weather.description}
         className="mainImage"
         id="mainImageElement"
