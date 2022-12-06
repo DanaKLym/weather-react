@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import CurrentDate from "./CurrentDate";
 import CloudyDay from "./pics/CloudyDay.png"
 
 export default function Weather() {
@@ -12,6 +13,7 @@ export default function Weather() {
       ready: true,
       city: response.data.city,
       country: response.data.country,
+      date: new Date(response.data.time * 1000),
       description: response.data.condition.description,
       temperature: response.data.temperature.current,
       humidity: response.data.temperature.humidity,
@@ -45,8 +47,7 @@ export default function Weather() {
   <section className="mainWeather">
   <p>
     <span className="dateTime">
-      Thursday, December 01, 2022,{" "}
-      13:39
+      <CurrentDate date={weather.date}/>
     </span>{" "}
     <br />
     <span id="description">{weather.description}</span>
