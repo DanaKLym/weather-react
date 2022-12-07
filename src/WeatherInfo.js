@@ -1,6 +1,5 @@
 import React from "react";
 import CurrentDate from "./CurrentDate";
-import CloudyDay from "./pics/CloudyDay.png"
 
 export default function WeatherInfo(props) {
     return <div className="WeatherInfo">
@@ -18,7 +17,7 @@ export default function WeatherInfo(props) {
   <div className="col">
     <h2 className="degrees">
       <img
-        src={CloudyDay}
+        src={props.data.iconURL}
         alt={props.data.description}
         className="mainImage"
         id="mainImageElement"
