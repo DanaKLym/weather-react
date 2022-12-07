@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import axios from "axios";
-import CurrentDate from "./CurrentDate";
-import CloudyDay from "./pics/CloudyDay.png"
+import WeatherInfo from "./WeatherInfo";
 
-export default function Weather() {
+
+export default function Weather(props) {
 
   const [weather, setWeather] = useState ({ready: false});
+  const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response){
-    console.log(response.data);
     setWeather({
       ready: true,
       city: response.data.city,
@@ -21,9 +21,29 @@ export default function Weather() {
     });
   }
 
+  function search() {
+    const apiKey = "b91708t4bbb93aa86b666d50a5of7abe";
+    let units = "metric";
+
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
+    
+    axios.get(apiUrl).then(handleResponse);
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+    //search for city;
+  }
+
+  function handleCityChange(event) {
+    setCity(event.target.value);
+    //update city;
+  }
+
   if (weather.ready) {
     return  <div className="Weather">
-    <form className="search">
+    <form className="search" onSubmit={handleSubmit}>
       <input
         type="text"
         placeholder="search"
@@ -31,6 +51,7 @@ export default function Weather() {
         autoComplete="off"
         className="search-input"
         id="city-search"
+        onChange={handleCityChange}
       />
       <input type="submit" value="Go!" className="upperBtn" />
       <button className="upperBtn" id="location-button">
@@ -41,77 +62,13 @@ export default function Weather() {
         />
       </button>
     </form>
-    <h1 className="mainCity">{weather.city}</h1>
-    <h4>{weather.country}</h4>
-  <section className="mainWeather">
-  <p>
-    <span className="dateTime">
-      <CurrentDate date={weather.date}/>
-    </span>{" "}
-    <br />
-    <span id="description">{weather.description}</span>
-  </p>
-  <div className="row">
-  <div className="col">
-    <h2 className="degrees">
-      <img
-        src={CloudyDay}
-        alt={weather.description}
-        className="mainImage"
-        id="mainImageElement"
-      />
-      <br />
-      <div className="mainTemperature">
-    <span className="mainDegrees">{Math.round(weather.temperature)}</span>
-    <span className="temType">
-      <a href="/" id="celcius" className="active">
-        °C
-      </a>{" "}
-      |
-      <a href="/" id="fahrenheit" className="to-be-chosen">
-        °F
-      </a>
-    </span>
-  </div>
-    </h2>
-  </div>
-  <div className="col">
-    <br />
-    <span className="humidity">
-      <img
-        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/038/871/original/humidity.png?1656363285"
-        alt="humidity-icon"
-        width="20px"
-      />{" "}
-      Humidity: <span id="humidity">{weather.humidity}</span>%
-    </span>
-    <br />
-    <span className="wind">
-      <img
-        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/038/872/original/wind.png?1656363294"
-        alt="wind-icon"
-        width="20px"
-      />{" "}
-      Wind:
-      <span id="wind"> {Math.round(weather.wind)}</span>
-      <span id="wind-conversion"> m/s</span>
-    </span>
-  </div>
-  </div>
-</section>
-<hr />
+    <WeatherInfo data={weather}/>
+    
 <section className="lowerWeather" id="forecast"></section>
 <hr />
 </div>;
-  } else {
-    
-    const apiKey = "b91708t4bbb93aa86b666d50a5of7abe";
-    let city = "New York";
-    let units = "metric";
-    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
-    
-    axios.get(apiUrl).then(handleResponse);
-
+  } else {    
+    search();
     return <p>Loading...</p>
   }
   
