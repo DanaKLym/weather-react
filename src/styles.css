@@ -133,7 +133,6 @@ body {
 
     .mainImage {
       display: block;
-      width: 180px;
       transition: var(--transition);
     }
     
