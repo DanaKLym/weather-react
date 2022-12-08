@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { Dna } from 'react-loader-spinner'
 import WeatherInfo from "./WeatherInfo";
 
 
@@ -72,7 +73,14 @@ export default function Weather(props) {
 </div>;
   } else {    
     search();
-    return <p>Loading...</p>
+    return <Dna
+    visible={true}
+    height="80"
+    width="80"
+    ariaLabel="dna-loading"
+    wrapperStyle={{}}
+    wrapperClass="dna-wrapper"
+  />
   }
   
 

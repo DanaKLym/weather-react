@@ -109,57 +109,34 @@ body {
       text-align: start;
     }
     
-    section h2.degrees {
-      font-family: var(--primary-font);
-      filter: drop-shadow(var(--text-shadow));
-      font-size: 14px;
-    }
-    
     section p span.dateTime {
       font-family: var(--secondary-font);
       color: var(--secondary-color);
       font-weight: 700;
     }
     
-    section p #description {
+    section p #description, span.humidity, span.wind {
       font-family: var(--secondary-font);
       color: var(--secondary-color);
-      display: block;
+      font-weight: 500;
     }
     
     section p #description:first-letter {
       text-transform: uppercase;
     }
-
-    .mainImage {
-      display: block;
-      transition: var(--transition);
-    }
     
-    .mainImage:hover {
-      transform: scale(1.2);
+    section h2.leftColumn {
+    font-family: var(--primary-font);
+    filter: drop-shadow(var(--text-shadow));
     }
-  
+
     span.mainDegrees {
       font-size: 42px;
       color: #1e1b1e;
     }
+
     span.temType {
       font-size: 24px;
-      cursor: pointer;
-    }
-    
-    .active {
-      cursor: default;
-      text-decoration: none;
-      color: var(--primary-color);
-      font-size: 24px;
-    }
-    
-    .active:hover {
-      text-decoration: none;
-      cursor: text;
-      color: var(--primary-color);
     }
     
     a.to-be-chosen {
@@ -172,12 +149,6 @@ body {
       font-size: 26px;
       color: #03105a;
     }
-
-    span.humidity,
-span.wind {
-  font-family: var(--secondary-font);
-  color: var(--secondary-color);
-}
 
 hr {
   margin: 15px 45px;

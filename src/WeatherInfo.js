@@ -1,6 +1,7 @@
 import React from "react";
 import CurrentDate from "./CurrentDate";
 import WeatherIcon from "./WeatherIcon";
+import MainTemperature from "./MainTemperature";
 
 export default function WeatherInfo(props) {
     return <div className="WeatherInfo">
@@ -12,25 +13,13 @@ export default function WeatherInfo(props) {
       <CurrentDate date={props.data.date}/>
     </span>{" "}
     <br />
-    <span id="description">{props.data.description}</span>
+    <span id="description" className="d-block">{props.data.description}</span>
   </p>
   <div className="row">
   <div className="col">
-    <h2 className="degrees">
+    <h2 className="leftColumn">
       <WeatherIcon code={props.data.icon}/>
-      <br />
-      <div className="mainTemperature">
-    <span className="mainDegrees">{Math.round(props.data.temperature)}</span>
-    <span className="temType">
-      <a href="/" id="celcius" className="active">
-        °C
-      </a>{" "}
-      |
-      <a href="/" id="fahrenheit" className="to-be-chosen">
-        °F
-      </a>
-    </span>
-  </div>
+      <MainTemperature celsius={props.data.temperature}/>
     </h2>
   </div>
   <div className="col">
