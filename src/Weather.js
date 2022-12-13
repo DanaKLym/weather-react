@@ -68,7 +68,7 @@ export default function Weather(props) {
     </form>
     <WeatherInfo data={weather}/>
 <section className="lowerWeather">
-  <WeatherForecast />
+  <WeatherForecast city={weather.city} description={weather.description}/>
 </section>
 <hr />
 </div>;
