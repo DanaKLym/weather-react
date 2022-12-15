@@ -1,7 +1,6 @@
 import React from "react";
 import CurrentDate from "./CurrentDate";
 import WeatherIcon from "./WeatherIcon";
-//<WeatherIcon code={props.data.icon} size={100}/>
 import MainTemperature from "./MainTemperature";
 
 export default function WeatherInfo(props) {

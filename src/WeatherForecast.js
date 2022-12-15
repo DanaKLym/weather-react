@@ -1,26 +1,36 @@
 import axios from "axios";
-import React from "react";
-import WeatherIcon from "./WeatherIcon";
+import React, {useState} from "react";
+import ForecastDay from "./ForecastDay";
 
 export default function WeatherForecast(props) {
+    let [loaded, setLoaded] = useState(false);
+    let [forecast, setForecast] = useState(null);
+
     function handleResponse(response) {
-        
+        setForecast(response.data.daily);
+        setLoaded(true);
     }
 
-    let apiKey = "b91708t4bbb93aa86b666d50a5of7abe";
-    let forecastCity = props.city;
-    let unit = "imperial";
-    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${forecastCity}&key=${apiKey}&units=${unit}`;
-
-    axios.get(apiUrl).then(handleResponse);
-    return (
-    <div className="weatherForecast">
-        <div className="row">
-            <div className="col">
-                <div className="forecast-day">Fri</div>
-                <WeatherIcon code="snow-night" description="snow" size={100} />
-                <div className="forecast-temperature"> <span className="forecast-temperature-max">19°</span> <span className="forecast-temperature-min">10°</span> </div>
+    if (loaded) {
+        console.log(forecast);
+        
+        return (
+            <div className="weatherForecast">
+            <div className="row">
+                <div className="col">
+                    <ForecastDay data={forecast[0]}/>
+                </div>
             </div>
-        </div>
-    </div>)
+        </div>) } 
+        else {
+            let apiKey = "b91708t4bbb93aa86b666d50a5of7abe";
+            let forecastCity = props.city;
+            let unit = "metric";
+            let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${forecastCity}&key=${apiKey}&units=${unit}`;
+
+            axios.get(apiUrl).then(handleResponse);
+
+        return null;
+        }
+    
 }
