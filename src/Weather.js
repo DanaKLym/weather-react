@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Dna } from 'react-loader-spinner'
 import WeatherInfo from "./WeatherInfo";
-import WeatherForecast from "./WeatherForecast";
 
 
 export default function Weather(props) {
@@ -81,11 +80,7 @@ export default function Weather(props) {
         />
       </button>
     </form>
-    <WeatherInfo data={weather}/>
-<section className="lowerWeather">
-  <WeatherForecast city={weather.city} description={weather.description}/>
-</section>
-<hr />
+    <WeatherInfo data={weather} forecastCity={weather.city} forecastDescription={weather.description}/>
 </div>;
   } else {    
     search();

@@ -7,8 +7,7 @@ export default function WeatherInfo(props) {
     return <div className="WeatherInfo">
         <h1 className="mainCity">{props.data.city}</h1>
     <h4>{props.data.country}</h4>
-  <section className="mainWeather">
-  <p>
+  <p className="WeatherDescription">
     <span className="dateTime">
       <CurrentDate date={props.data.date}/>
     </span>{" "}
@@ -16,8 +15,6 @@ export default function WeatherInfo(props) {
     <span id="description" className="d-block">{props.data.description}</span>
   </p>
   <WeatherIcon code={props.data.icon} description={props.data.description} size={200}/>
-    <MainTemperature celsius={props.data.temperature} humidity={props.data.humidity} wind={props.data.wind}/>
-</section>
-<hr />
+    <MainTemperature celsius={props.data.temperature} humidity={props.data.humidity} wind={props.data.wind} forecastCity={props.forecastCity} forecastDescription={props.forecastDescription}/>
     </div>;
 }

@@ -102,25 +102,25 @@ body {
       font-size: 18px;
     }
     
-    section.mainWeather {
+    p.WeatherDescription {
       margin: 0 20px;
       padding: 0 30px;
       text-align: start;
     }
     
-    section p span.dateTime {
+    p span.dateTime {
       font-family: var(--secondary-font);
       color: var(--secondary-color);
       font-weight: 700;
     }
     
-    section p #description, span.humidity, span.wind {
+    p #description, span.humidity, span.wind {
       font-family: var(--secondary-font);
       color: var(--secondary-color);
       font-weight: 500;
     }
     
-    section p #description:first-letter {
+    p #description:first-letter {
       text-transform: uppercase;
     }
 
