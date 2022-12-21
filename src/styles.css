@@ -1,4 +1,3 @@
-/* 2px 2px 3px #fff */
 :root {
   --primary-font: 'DM Serif Display', serif;
   --secondary-font: "Josefin Sans", sans-serif;
@@ -124,31 +123,11 @@ body {
     section p #description:first-letter {
       text-transform: uppercase;
     }
-    
-    section h2.leftColumn {
-    font-family: var(--primary-font);
-    filter: drop-shadow(var(--text-shadow));
-    }
 
-    span.mainDegrees {
-      font-size: 42px;
-      color: #1e1b1e;
-    }
-
-    span.temType {
-      font-size: 24px;
+    .weatherIcon {
+      text-align: center;
     }
     
-    a.to-be-chosen {
-      text-decoration: none;
-      color: rgba(3, 16, 90, 0.5);
-      transition: var(--transition);
-    }
-    
-    a.to-be-chosen:hover {
-      font-size: 26px;
-      color: #03105a;
-    }
 
 hr {
   margin: 15px 45px;

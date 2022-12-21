@@ -1,0 +1,25 @@
+.mainTemperature {
+    font-family: var(--primary-font);
+    filter: drop-shadow(var(--text-shadow));
+    text-align: center;
+    }
+
+    span.mainDegrees {
+      font-size: 80px;
+      color: #1e1b1e;
+    }
+
+    span.temType {
+      font-size: 24px;
+    }
+    
+    a.to-be-chosen {
+      text-decoration: none;
+      color: rgba(3, 16, 90, 0.5);
+      transition: var(--transition);
+    }
+    
+    a.to-be-chosen:hover {
+      font-size: 26px;
+      color: #03105a;
+    }
