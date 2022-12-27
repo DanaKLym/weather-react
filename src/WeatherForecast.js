@@ -18,19 +18,17 @@ export default function WeatherForecast(props) {
 
     if (loaded) {
         return (
-            <div className="weatherForecast">
-            <div className="row">
+            <div className="row weatherForecast">
                 {forecast.map(function(dailyForecast, index) {
                     if (index < 5) {
-                        return (<div className="col" key={index}>
+                        return (<div className="col forecast-day-card p-1" key={index}>
                     <ForecastDay data={dailyForecast} forecastDescription={props.forecastDescription}/>
                 </div>);
                     } else {
                         return null;
                     }
                 })}
-            </div>
-        </div>) } 
+            </div>) } 
         else {
             let apiKey = "b91708t4bbb93aa86b666d50a5of7abe";
             let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${props.forecastCity}&key=${apiKey}&units=${props.forecastUnits}`;

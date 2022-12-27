@@ -12,3 +12,9 @@
     color: var(--secondary-color);
     font-weight: 500;
 }
+
+@media (max-width: 600px) {
+    .forecast-day-card {
+        flex: 100%;
+        }
+    }

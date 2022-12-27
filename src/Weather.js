@@ -73,7 +73,7 @@ export default function Weather(props) {
         onChange={handleCityChange}
       />
       <button className="upperBtn" id="location-button" onClick={getCurrentLocation}>
-      <i class="fa-solid fa-location-dot"></i>
+      <i className="fa-solid fa-location-dot"></i>
       </button>
     </form>
     <WeatherInfo data={weather} forecastCity={weather.city} forecastDescription={weather.description}/>

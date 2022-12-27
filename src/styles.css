@@ -29,13 +29,10 @@ body {
   
   .container {
     text-align: center;
-    margin: 60px auto;
+    margin: 10px auto;
     padding: 1px;
     max-width: 600px;
-  
-    backdrop-filter: blur(10px);
-    color: #000;
-  
+    
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.4);
     box-shadow: -20px -20px 26px rgba(247, 245, 244, 0.219), 20px 20px 25px rgba(247, 245, 244, 0.4);
@@ -53,7 +50,7 @@ body {
     }
     
     input.search-input {
-      background-color: inherit;
+      background-color: rgba(247, 245, 244, 0.4);
       border-radius: 0 8px 8px 0;
       border: 1px solid rgba(255, 255, 255, 0.4);
       color: var(--secondary-color);
@@ -76,7 +73,7 @@ body {
     }
   
     .searchBtn {
-      background: inherit;
+      background: rgba(247, 245, 244, 0.4);
       border: 1px solid rgba(255, 255, 255, 0.4);
       border-radius: 8px 0 0 8px;
       color: var(--secondary-color);
@@ -88,7 +85,7 @@ body {
     }
 
     .upperBtn {
-      background: inherit;
+      background: rgba(247, 245, 244, 0.4);
       border: 1px solid rgba(255, 255, 255, 0.4);
       border-radius: 8px;
       color: var(--secondary-color);
