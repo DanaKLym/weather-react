@@ -1,7 +1,6 @@
 .mainTemperature {
     font-family: var(--primary-font);
     filter: drop-shadow(var(--text-shadow));
-    text-align: center;
     }
 
     span.mainDegrees {

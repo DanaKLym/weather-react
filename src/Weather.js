@@ -62,22 +62,18 @@ export default function Weather(props) {
   if (weather.ready) {
     return  <div className="Weather">
     <form className="search" onSubmit={handleSubmit}>
+      <input type="submit" value="🔍︎" className="searchBtn" />
       <input
         type="text"
-        placeholder="search"
+        placeholder="..."
         autoFocus
         autoComplete="off"
         className="search-input"
         id="city-search"
         onChange={handleCityChange}
       />
-      <input type="submit" value="Go!" className="upperBtn" />
       <button className="upperBtn" id="location-button" onClick={getCurrentLocation}>
-        <img
-          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/048/106/original/home.png?1665489684"
-          alt="current location"
-          width="15px"
-        />
+      <i class="fa-solid fa-location-dot"></i>
       </button>
     </form>
     <WeatherInfo data={weather} forecastCity={weather.city} forecastDescription={weather.description}/>

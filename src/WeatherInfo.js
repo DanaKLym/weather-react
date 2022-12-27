@@ -6,8 +6,8 @@ import MainTemperature from "./MainTemperature";
 export default function WeatherInfo(props) {
     return <div className="WeatherInfo">
         <h1 className="mainCity">{props.data.city}</h1>
-    <h4>{props.data.country}</h4>
-  <p className="WeatherDescription">
+    <h4 className="text-start text-md-center mx-5 m-md-0">{props.data.country}</h4>
+  <p className="WeatherDescription text-start mt-2">
     <span className="dateTime">
       <CurrentDate date={props.data.date}/>
     </span>{" "}

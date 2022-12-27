@@ -17,9 +17,9 @@ export default function ForecastDay(props) {
             return days[day];
         }
 
-    return <div>
+    return <div className="forecast-day-card p-1">
         <div className="forecast-day">{forecastDay()}</div>
                     <WeatherIcon code={forecastIcon} description={props.forecastDescription} size={80} />
-                    <div className="forecast-temperature"> <span className="forecast-temperature-max">{Math.round(maxTemperature)}°</span> <span className="forecast-temperature-min">{Math.round(minTemperature)}°</span> </div>
+                    <div className="forecast-temperature"> <span className="forecast-temperature-max">{Math.round(maxTemperature)}°</span>/<span className="forecast-temperature-min">{Math.round(minTemperature)}°</span> </div>
     </div>;
 }

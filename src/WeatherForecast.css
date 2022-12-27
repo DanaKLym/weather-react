@@ -1,0 +1,14 @@
+.forecast-day-card {
+    transition: var(--transition);
+}
+
+.forecast-day-card:hover {
+    box-shadow: 2px 2px 8px #F7F5F4, 0 0 2px #F7F5F4;;
+    border-radius: 5px;
+} 
+
+.forecast-day, .forecast-temperature {
+    font-family: var(--secondary-font);
+    color: var(--secondary-color);
+    font-weight: 500;
+}

@@ -21,7 +21,7 @@ export default function MainTemperature(props) {
     if (unit === "celsius") {
         return <div>
         <div className="row">
-           <div className="col mainTemperature">
+           <div className="col text-center mainTemperature">
         <span className="mainDegrees">{Math.round(props.celsius)}</span>
         <span className="temType"> °C |
           <a href="/" className="to-be-chosen" onClick={converttoFahrenheit}>
@@ -43,7 +43,7 @@ export default function MainTemperature(props) {
 
         return <div>
           <div className="row">
-          <div className="col mainTemperature">
+          <div className="col text-center mainTemperature">
         <span className="mainDegrees">{Math.round(fahrenheit)}</span>
         <span className="temType">
           <a href="/" className="to-be-chosen" onClick={converttoCelsius}> °C

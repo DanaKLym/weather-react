@@ -2,29 +2,30 @@ footer {
     padding: 0 30px 15px;
   }
   
-  footer,
-  a.githubLink {
+  footer {
     font-family: var(--secondary-font);
+    color: var(--secondary-color);
     font-size: 15px;
-    opacity: 0.8;
+    font-weight: 500;
+   
   }
   
-  footer a.githubLink {
+ footer a.githubLink {
     display: inline-block;
+    color: var(--secondary-color);
     text-decoration: none;
-    color: #03105a;
     text-shadow: var(--text-shadow);
     transition: var(--transition);
   }
   
   footer a.githubLink:hover {
-    color: #03105a;
-    transform: scale(1.05);
+    color: var(--primary-color);
+    transform: scale(1.025);
   }
   
   footer a.githubLink:active {
     color: #fff;
-    text-shadow: 2px 2px 5px #03105a;
+    text-shadow: 2px 2px 5px var(--secondary-color);
     text-decoration: none;
   }
 
@@ -32,6 +33,7 @@ footer {
     text-decoration: none;
     font-weight: 700;
     color: #fff;
+    transition: var(--transition);
   }
   
   footer a.linkedinLink:hover {
