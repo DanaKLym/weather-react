@@ -29,13 +29,15 @@ footer {
     text-decoration: none;
   }
 
-  footer a.linkedinLink {
+  footer a.personalWebsiteLink {
     text-decoration: none;
     font-weight: 700;
     color: #fff;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
     transition: var(--transition);
   }
   
-  footer a.linkedinLink:hover {
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+  footer a.personalWebsiteLink:hover {
+    text-shadow: 2px 2px 5px #A487CA;
+    transform: scale(1.025);
   }

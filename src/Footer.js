@@ -14,12 +14,12 @@ export default function Footer() {
         Open-source code
       </a>{" "}
       by <a
-        href="https://www.linkedin.com/in/bohdana-klymenko-254472176/"
+        href="https://bohdanaklymenko.netlify.app/"
         target="_blank"
         rel="noreferrer"
-        className="linkedinLink"
-        title="LinkedIn profile"
-      >Dana</a>
+        className="personalWebsiteLink"
+        title="Personal website"
+      >Bohdana Klymenko</a>
     </footer>
   );
 }
