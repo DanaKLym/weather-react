@@ -29,19 +29,27 @@ export default function Weather(props) {
 
     let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
     
-    axios.get(apiUrl).then(handleResponse);
+    axios.get(apiUrl).then(handleResponse).catch(error);
   }
 
   function handleSubmit(event) {
     event.preventDefault();
-    search();
+      search();
     //search for city;
+  }
+  
+  function error(err) {
+    if (err) {
+    alert(`Oh no, it's windy in here 🍃 and some letters got blown away from that city name 😵‍💫 Please, check the spelling and try again`);
+  }
   }
 
   function handleCityChange(event) {
     setCity(event.target.value);
     //update city;
   }
+
+
 
   function searchCurrentLocation(location) {
     

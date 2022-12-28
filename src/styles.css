@@ -4,7 +4,7 @@
   --secondary-font: "Josefin Sans", sans-serif;
   --primary-color: #1e1b1e;
   --secondary-color: rgba(0, 0, 0, 0.6);
-  --text-shadow: 2px 2px 2px #f7f5f4;
+  --text-shadow: 2px 2px 4px #f7f5f4;
   --transition: all 300ms ease-in-out;
 }
 
@@ -81,7 +81,7 @@ body {
     }
 
     .searchBtn:hover {
-      box-shadow: 2px 2px 5px #F7F5F4, 1px -1px 5px #F7F5F4;;
+      box-shadow: var(--text-shadow), 1px -1px 5px #F7F5F4;;
     }
 
     .upperBtn {
@@ -97,7 +97,7 @@ body {
     }
     
     .upperBtn:hover {
-      box-shadow: 2px 2px 5px #F7F5F4, 1px -1px 5px #F7F5F4;
+      box-shadow: var(--text-shadow), 1px -1px 5px #F7F5F4;
       border-radius: 5px;
       filter: drop-shadow(var(--text-shadow));
     }
@@ -112,7 +112,7 @@ body {
       text-align: center;
       text-transform: capitalize;
       color: var(--primary-color);
-      filter: drop-shadow(var(--text-shadow));
+      text-shadow: var(--text-shadow);
       font-family: var(--primary-font);
       font-size: 86px;
     }

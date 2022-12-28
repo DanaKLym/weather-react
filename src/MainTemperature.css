@@ -1,11 +1,11 @@
 .mainTemperature {
     font-family: var(--primary-font);
-    filter: drop-shadow(var(--text-shadow));
-    }
-
-    span.mainDegrees {
-      font-size: 80px;
-      color: #1e1b1e;
+  }
+  
+  span.mainDegrees {
+    font-size: 80px;
+    color: #1e1b1e;
+    text-shadow: var(--text-shadow);
     }
 
     span.temType {
@@ -14,11 +14,12 @@
     
     a.to-be-chosen {
       text-decoration: none;
-      color: rgba(3, 16, 90, 0.5);
+      color: rgba(0, 0, 0, 0.4);
       transition: var(--transition);
     }
     
     a.to-be-chosen:hover {
       font-size: 26px;
-      color: #03105a;
+      color: var(--primary-color);
+      text-shadow: 2px 5px 5px var(--secondary-color);
     }
